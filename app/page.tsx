@@ -283,13 +283,12 @@ export default function HomePage() {
               {step === 2 && (
                 <div className="space-y-4">
                   <p className="text-sm text-slate-200">
-                    Great! Now tell me a bit about the person getting the gifts. If that&apos;s you,
-                    you can talk about yourself too.
+                    Great! Now tell me a bit about yourself. I'd love to get to know you and your interests!
                   </p>
 
                   <div className="grid grid-cols-2 gap-3">
                     <div className="space-y-2">
-                      <Label htmlFor="age">How old are they?</Label>
+                      <Label htmlFor="age">How old are you?</Label>
                       <Input
                         id="age"
                         type="number"
@@ -310,7 +309,7 @@ export default function HomePage() {
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="interests">What kinds of things do they love?</Label>
+                    <Label htmlFor="interests">What kinds of things do you love?</Label>
                     <Textarea
                       id="interests"
                       placeholder="Tell me in your own words. For example: lego, soccer, books about dragons, coding, slime, stuffed animals..."
