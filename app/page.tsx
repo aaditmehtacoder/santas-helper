@@ -547,25 +547,25 @@ function getStepMeta(step: Step): {
       };
     case 2:
       return {
-        label: "About the kid",
+        label: "About You",
         icon: User,
         iconClass: "bg-sky-500/15 text-sky-200 border-sky-400/60"
       };
     case 3:
       return {
-        label: "Where to shop",
+        label: "Where to Shop",
         icon: ShoppingBag,
         iconClass: "bg-emerald-500/15 text-emerald-200 border-emerald-400/60"
       };
     case 4:
       return {
-        label: "Gift ideas",
+        label: "Gift Ideas",
         icon: Gift,
         iconClass: "bg-violet-500/15 text-violet-200 border-violet-400/60"
       };
     case 5:
       return {
-        label: "Send to parent",
+        label: "Send to Parent",
         icon: Send,
         iconClass: "bg-indigo-500/15 text-indigo-200 border-indigo-400/60"
       };
