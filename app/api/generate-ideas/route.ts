@@ -27,7 +27,7 @@ export async function POST(req: Request) {
   };
 
   const apiKey = process.env.GEMINI_API_KEY;
-  const model = process.env.GEMINI_MODEL || "gemini-pro"; // 👈 configurable, safe default
+  const model = process.env.GEMINI_MODEL || "gemini-2.5-pro"; // 👈 configurable, safe default
 
   // Helper: static fallback ideas (used when no key or API errors)
   const fallbackIdeas: GiftIdea[] = [
@@ -38,19 +38,12 @@ export async function POST(req: Request) {
     },
     {
       id: "2",
-      name:
-        "Storybook about " + (interests.split(",")[0]?.trim() || "big adventures"),
-      description:
-        "A beautifully illustrated story that matches what they love reading about."
-    },
-    {
-      id: "3",
       name: "Cozy Hoodie",
       description:
         "A comfy hoodie in their favorite color so they can feel hugged by home."
     },
     {
-      id: "4",
+      id: "3",
       name: "Activity Pack",
       description:
         "Stickers, markers, and a small notebook so they can draw, write, and dream."
@@ -87,11 +80,10 @@ Now create the ideas.
 `;
 
   try {
-    const url =
-      "https://generativelanguage.googleapis.com/v1/models/" +
-      encodeURIComponent(model) +
-      ":generateContent?key=" +
-      apiKey;
+    const apiKey = process.env.GEMINI_API_KEY;
+    const model = process.env.GEMINI_MODEL || "gemini-2.5-flash";
+
+    const url = `https://generativelanguage.googleapis.com/v1/models/${model}:generateContent?key=${apiKey}`;
 
     const res = await fetch(url, {
       method: "POST",
