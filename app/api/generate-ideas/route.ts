@@ -100,7 +100,7 @@ REQUIREMENTS:
 
 1. ITEM FORMAT
 - "name": A SPECIFIC product name that exists on real online stores (Amazon, eBay, etc.).
-  Examples of good names:
+  Examples of good names (don't use it, this is just an example):
     - "National Geographic Kids Space Encyclopedia (Hardcover)"
     - "LEGO Star Wars Mandalorian Fang Fighter Set"
     - "Crayola Light-Up Tracing Pad for Kids"
